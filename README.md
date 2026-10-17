@@ -54,8 +54,9 @@ The project is developed in pure Python (standard library compatible with minima
 
 **On Windows (PowerShell):**
 ```powershell
-# 1. Navigate to the project directory
-cd one_user_one_agent_pack
+# 1. Clone the repository and enter the directory
+git clone https://github.com/Tushar260603/One-User-One-Agent.git
+cd One-User-One-Agent
 
 # 2. Create virtual environment
 python -m venv .venv
@@ -70,8 +71,9 @@ python -m pip install -r requirements.txt
 
 **On macOS / Linux (Bash / Zsh):**
 ```bash
-# 1. Navigate to the project directory
-cd one_user_one_agent_pack
+# 1. Clone the repository and enter the directory
+git clone https://github.com/Tushar260603/One-User-One-Agent.git
+cd One-User-One-Agent
 
 # 2. Create virtual environment
 python3 -m venv .venv
@@ -87,10 +89,15 @@ python3 -m pip install -r requirements.txt
 #### Option B: Direct User-Level Installation (No Virtual Environment Needed)
 If you prefer running directly without a virtual environment:
 ```powershell
-# Windows
+# 1. Clone the repository
+git clone https://github.com/Tushar260603/One-User-One-Agent.git
+cd One-User-One-Agent
+
+# 2. Install dependencies
+# Windows:
 python -m pip install -r requirements.txt
 
-# macOS / Linux
+# macOS / Linux:
 python3 -m pip install -r requirements.txt
 ```
 
