@@ -1,0 +1,25 @@
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest & Testing Cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environments & Virtualenvs
+.venv/
+venv/
+ENV/
+env/
+
+# IDE & OS Junk
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Dynamic Agent User State Cache
+viewer_state/
+**/viewer_state/
