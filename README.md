@@ -132,6 +132,18 @@ python -m src.main run-all --pack . --output sample_run
 4. **[4/4] Official Simulator Execution:** Runs `simulator/simulate_outcomes.py` to simulate 14 days of viewer outcomes across all triggered users.
 5. **[5/5] Causal Impact Evaluation:** Evaluates simulator outcomes using Intent-to-Treat (ITT) and writes `sample_run/impact_report.md`.
 
+### Inspecting the Generated Artifacts & Reports
+After the pipeline completes, all outputs are organized in the `sample_run/` directory:
+
+| Artifact File | Description | Key Verification Metrics |
+| :--- | :--- | :--- |
+| **[`sample_run/impact_report.md`](sample_run/impact_report.md)** | Intent-to-Treat (ITT) A/B evaluation report against holdout. | **+1.26 pp** watch conversion uplift, **+78** plays started. |
+| **[`sample_run/sim/simulator_report.json`](sample_run/sim/simulator_report.json)** | Official simulator acceptance & policy audit report. | **100%** acceptance (1,150/1,150), **0** policy violations. |
+| **[`sample_run/latency_report.json`](sample_run/latency_report.json)** | p50, p90, p95, and max decision latency audit. | p95 = **0 ms**, max = **53 ms** ($< 60,000$ ms SLA). |
+| **[`sample_run/actions.jsonl`](sample_run/actions.jsonl)** | 1,150 personalized actions published to the simulator backend. | Home hero & rows, push, and WhatsApp interventions. |
+| **[`sample_run/decisions.jsonl`](sample_run/decisions.jsonl)** | 2,337 full decision records conforming to Section 4 JSON schema. | Full context, active goal, candidate actions, and chosen action. |
+| **[`sample_run/final_report.md`](sample_run/final_report.md)** | Executive markdown summary of the complete test day execution. | Overview of throughput, guardrail compliance, and uplift. |
+
 ---
 
 ## 3. Running the Automated Test Suite
